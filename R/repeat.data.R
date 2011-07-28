@@ -1,6 +1,11 @@
-#' Add Repittions of \code{data.frame} from Gamma-style Formula
-#' @param formula
-#' @param data
+#' Add Repittions of \code{data.frame} from GAM-style Formula
+#'
+#' \code{repeat.data} copies data-columns relative to the number of degrees of
+#' freedom in the statistical regression. This allows appropriate simulations
+#' of quantities of interest.
+#' @note This function is not intended to be computed directly.
+#' @param obj a \code{zelig} object specifying a statistical regression
+#' @param x a \code{setx} object specifying information about counterfactuals
 #' @return a correctly formatted data.frame
 #' @author Matt Owen
 repeat.data <- function (obj, x) {

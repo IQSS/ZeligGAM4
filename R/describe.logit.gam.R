@@ -4,7 +4,8 @@
 #' @export
 describe.logit.gam <- function(...) {
   list(
-       authors = "",
-       text = ""
+       authors = "Matt Owen and Skuler J. Cranmer",
+       text = "Generalized Additive Model for Logistic Regression of Dichotomous Dependent Variables",
+       year = 2011
        )
 }

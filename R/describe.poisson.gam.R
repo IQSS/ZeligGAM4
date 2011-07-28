@@ -4,7 +4,8 @@
 #' @export
 describe.poisson.gam <- function(...) {
   list(
-       authors = "",
-       text = ""
+       authors = "Matt Owen and Skuler J. Cranmer",
+       text = "Generalized Additive Model for Poisson Regression of Count Dependent Variables",
+       year = 2011
        )
 }

@@ -6,7 +6,7 @@
 #' @return a list specifying '.function'
 #' @export
 zelig2logit.gam <- function (formula, ..., data) {
-  class(formula) <- c('GammaFormula', 'formula')
+  class(formula) <- c('GamFormula', 'formula')
   list(
        .function = "gam",
        formula = formula,
