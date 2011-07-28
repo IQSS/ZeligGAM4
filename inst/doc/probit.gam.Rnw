@@ -1,18 +1,18 @@
+\documentclass{article}
 \SweaveOpts{results=hide, prefix.string=vigpics/gam}
-\include{zinput}
+\usepackage{bibentry}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{Zelig}
+\usepackage{Sweave}
 %\VignetteIndexEntry{Generalized Additive Model for Dichotomous Dependent Variables}
 %\VignetteDepends{Zelig, stats}
 %\VignetteKeyWords{model, gam, probit.gam}
 %\VignettePackage{Zelig}
 \begin{document}
 \nobibliography*
-<<beforepkgs, echo=FALSE>>=
- before=search()
-@
-<<loadLibrary, echo=F,results=hide>>=
-library(Zelig)
-@ 
-
 \section{{\tt probit.gam}: Generalized Additive Model for Dichotomous Dependent Variables}
 
 This function runs a nonparametric Generalized Additive Model (GAM) for dichotomous dependent variables. 
@@ -44,7 +44,7 @@ In addition to the standard inputs, {\tt zelig()} takes the following additional
 Create some count data:
 
 <<echo=FALSE, results=hide>>=
-library(Zelig)
+library(gam.zelig)
 <<echo=FALSE, results=hide>>=
 set.seed(0); n<-400; sig<-2
 x0 <- runif(n, 0, 1); x1 <- runif(n, 0, 1); x2 <- runif(n, 0, 1); x3 <- runif(n, 0, 1)
@@ -264,20 +264,16 @@ The output of each Zelig command contains useful information which you may view.
 \end{itemize}
 \end{itemize}
 
-\subsection* {How to Cite} 
+\subsection*{How to Cite the Probit General Addtitive Model}
+\bibentry{OwenCranmer-probit.gam11}
 
-\input{cites/probit.gam}
-\input{citeZelig}
+\subsection*{How to Cite the Zelig Software Package}
+\CiteZelig
+
 \subsection* {See also}
 The {\tt gam.logit} model is adapted from the  {\tt mgcv} package by Simon N. Wood \citep{Wood06}. Advanced users may wish to refer to {\tt help(gam)},  \cite{Wood04}, \cite{Wood00}, and other documentation accompanying the {\tt mgcv} package. All examples are reproduced and extended from {\tt mgcv}'s {\tt gam()} help pages.
 
 
-\bibliographystyle{asa}
-\bibliography{gk,gkpubs}
-<<afterpkgs, echo=FALSE>>=
- after<-search()
- torm<-setdiff(after,before)
- for (pkg in torm)
- detach(pos=match(pkg,search()))
-@
+\bibliographystyle{plain}
+\bibliography{gam.zelig}
 \end{document}

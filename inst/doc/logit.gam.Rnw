@@ -1,7 +1,5 @@
 \documentclass{article}
-
 \SweaveOpts{results=hide, prefix.string=vigpics/gam}
-
 \usepackage{bibentry}
 \usepackage{graphicx}
 \usepackage{natbib}
@@ -272,13 +270,15 @@ The output of each Zelig command contains useful information which you may view.
 \end{itemize}
 \end{itemize}
 
-\subsection* {How to Cite} 
+\subsection*{How to Cite the Logitistic General Additive Model}
+\bibentry{OwenCranmer-logit.gam11}
 
-\input{cites/logit.gam}
-\input{citeZelig}
+\subsection*{How to Cite the Zelig Software Package}
+\CiteZelig
+
 \subsection* {See also}
 The {\tt logit.gam} model is adapted from the  {\tt mgcv} package by Simon N. Wood \citep{Wood06}. Advanced users may wish to refer to {\tt help(gam)},  \cite{Wood04}, \cite{Wood00}, and other documentation accompanying the {\tt mgcv} package. All examples are reproduced and extended from {\tt mgcv}'s {\tt gam()} help pages.
 
 \bibliographystyle{plain}
-\bibliography{gk,gkpubs}
+\bibliography{gam.zelig}
 \end{document}

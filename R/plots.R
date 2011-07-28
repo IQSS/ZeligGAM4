@@ -59,7 +59,7 @@ plot.sim.logit.gam <- normal.plot <- function (x, ...) {
   par(original.par)
 }
 
-#' Plot Simualted Quantities of Interest for GEE Zelig Models
+#' Plot Simualted Quantities of Interest for GAM Zelig Models
 #' @usage \method{plot}{sim.normal.gam}(x, ...)
 #' @param x a simulated GEE object containing simulations of quantities of
 #'   interest
@@ -68,7 +68,7 @@ plot.sim.logit.gam <- normal.plot <- function (x, ...) {
 #' @S3method plot sim.normal.gam
 plot.sim.normal.gam <- normal.plot
 
-#' Plot Simualted Quantities of Interest for GEE Zelig Models
+#' Plot Simualted Quantities of Interest for GAM Zelig Models
 #' @usage \method{plot}{sim.poisson.gam}(x, ...)
 #' @param x a simulated GEE object containing simulations of quantities of
 #'   interest
@@ -77,13 +77,13 @@ plot.sim.normal.gam <- normal.plot
 #' @S3method plot sim.poisson.gam
 plot.sim.poisson.gam <- normal.plot
 
-#' Plot Simualted Quantities of Interest for GEE Zelig Models
+#' Plot Simualted Quantities of Interest for GAM Zelig Models
 #' @usage \method{plot}{sim.probit.gam}(x, ...)
 #' @param x a simulated GEE object containing simulations of quantities of
 #'   interest
 #' @param ... ignored parameters
 #' @author Matt Owen \email{mowen@@iq.harvard.edu}
-#' @S3method plot sim.poisson.gam
+#' @S3method plot sim.probit.gam
 plot.sim.probit.gam <- normal.plot
 
 
@@ -110,8 +110,10 @@ GAMplot <- function (x, main, col) {
 plotdensity <- function (x, main, col) {
   if (all(is.na(x)))
     return()
+  else if (any(is.na(x)))
+    warning("\"", main, "\" contains missin values. Omitting")
 
-  density <- density(x)
+  density <- density(x, na.rm=TRUE)
   plot(density(x), main = main, col = col)
 }
 
@@ -123,6 +125,8 @@ plotdensity <- function (x, main, col) {
 plotfactor <- function (x, main, col) {
   if (all(is.na(x)))
     return()
+  else if (any(is.na(x)))
+    warning("\"", main, "\" contains missin values. Omitting")
 
   barplot(table(x), main=main, col=col)
 }
