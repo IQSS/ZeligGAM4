@@ -15,7 +15,7 @@ compute.ev <- function (obj, x, inv, num) {
     return(NA)
 
   # get actual fitted model object
-  obj <- obj$result
+  obj <- GetObject(obj)
 
   # get appropriate data.frame
   x <- repeat.data(obj, x)

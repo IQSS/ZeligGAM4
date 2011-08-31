@@ -111,7 +111,7 @@ plotdensity <- function (x, main, col) {
   if (all(is.na(x)))
     return()
   else if (any(is.na(x)))
-    warning("\"", main, "\" contains missing values. Omitting")
+    warning("\"", main, "\" contains missin values. Omitting")
 
   density <- density(x, na.rm=TRUE)
   plot(density(x), main = main, col = col)
@@ -126,7 +126,7 @@ plotfactor <- function (x, main, col) {
   if (all(is.na(x)))
     return()
   else if (any(is.na(x)))
-    warning("\"", main, "\" contains missing values. Omitting")
+    warning("\"", main, "\" contains missin values. Omitting")
 
   barplot(table(x), main=main, col=col)
 }
