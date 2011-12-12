@@ -45,7 +45,7 @@ In addition to the standard inputs, {\tt zelig()} takes the following additional
 Create some count data:
 
 <<echo=FALSE, results=hide>>=
-library(gam.zelig)
+library(ZeligGAM)
 <<echo=FALSE, results=hide>>=
 set.seed(0)
 n<-400 
@@ -280,5 +280,5 @@ The output of each Zelig command contains useful information which you may view.
 The {\tt logit.gam} model is adapted from the  {\tt mgcv} package by Simon N. Wood \citep{Wood06}. Advanced users may wish to refer to {\tt help(gam)},  \cite{Wood04}, \cite{Wood00}, and other documentation accompanying the {\tt mgcv} package. All examples are reproduced and extended from {\tt mgcv}'s {\tt gam()} help pages.
 
 \bibliographystyle{plain}
-\bibliography{gam.zelig}
+\bibliography{ZeligGAM}
 \end{document}

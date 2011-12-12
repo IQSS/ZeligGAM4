@@ -44,7 +44,7 @@ In addition to the standard inputs, {\tt zelig()} takes the following additional
 Create some count data:
 
 <<echo=FALSE, results=hide>>=
-library(gam.zelig)
+library(ZeligGAM)
 <<echo=FALSE, results=hide>>=
 set.seed(0); n<-400; sig<-2
 x0 <- runif(n, 0, 1); x1 <- runif(n, 0, 1); x2 <- runif(n, 0, 1); x3 <- runif(n, 0, 1)
@@ -275,5 +275,5 @@ The {\tt gam.logit} model is adapted from the  {\tt mgcv} package by Simon N. Wo
 
 
 \bibliographystyle{plain}
-\bibliography{gam.zelig}
+\bibliography{ZeligGAM}
 \end{document}

@@ -59,7 +59,7 @@ Create some data:
 \end{Schunk}
 
 <<echo=FALSE, results=hide>>=
-library(gam.zelig)
+library(ZeligGAM)
 <<echo=FALSE, results=hide>>=
 set.seed(0); n<-400; sig<-2
 set.seed(0);  n <- 400; sig <- 2; 
@@ -274,5 +274,5 @@ The {\tt gam.logit} model is adapted from the  {\tt mgcv} package by Simon N. Wo
 
 
 \bibliographystyle{plain}
-\bibliography{gam.zelig}
+\bibliography{ZeligGAM}
 \end{document}
