@@ -1,4 +1,4 @@
-library(gam.zelig)
+library(ZeligGAM)
 
 #####  Example 1: Basic Example with First Differences  #####
 

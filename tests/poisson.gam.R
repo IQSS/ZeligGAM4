@@ -1,4 +1,4 @@
-library(gam.zelig)
+library(ZeligGAM)
 library(mgcv)
 
 set.seed(0) 

@@ -1,4 +1,4 @@
-library(gam.zelig)
+library(ZeligGAM)
 
 set.seed(0) 
 n<-400
