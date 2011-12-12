@@ -1,14 +1,14 @@
-Package: gam.zelig
+Package: ZeligGAM
 License: GPL (>=2)
 Maintainer: Matt Owen <mowen@iq.harvard.edu>
 Title: A Zelig Model
 Author: Skyler Cranmer
 Description: A Zelig Model
-Version: 0.1
+Version: 0.2
 Packaged: Wed Jul 27 09:11:16 2011
 URL: http://gking.harvard.edu/zelig
 Date: 2011-07-27
-Depends: Zelig, gam, mgcv
+Depends: Zelig (>= 4.0-6), gam, mgcv
 Collate: 'compute.ev.R' 'describe.logit.gam.R' 'describe.normal.gam.R'
     'describe.poisson.gam.R' 'describe.probit.gam.R'
     'gam.zelig-package.R' 'model.frame.GamFormula.R'

@@ -13,7 +13,7 @@ repeat.data <- function (obj, x) {
     return(NULL)
 
   object <- obj
-  data <- x$data.frame
+  data <- x$updated
   pterms <- attr(object$pterms, 'term.labels')
   sterms <- list()
   df.vec <- vector()
@@ -34,30 +34,32 @@ repeat.data <- function (obj, x) {
     stop("Cannot simulate quantities of interest without an intercept")
 
   # ignore intercept column. This is ported from original Zelig
-  for (k in 2:ncol(data)) {
-    name <- names(data)[[k]]
+  if (ncol(data) > 1) {
+    for (k in 2:ncol(data)) {
+      name <- names(data)[[k]]
 
-    # untested
-    if (name %in% pterms) {
-      temp <- as.data.frame(data[[k]])
-      names(temp) <- name
-      newx <- cbind(newx, temp)
-    }
-
-    # repeat entries in s-term at least as many times as there are degrees of 
-    # freedom for that term
-    if (name %in% sterms) {
-      for (j in 1:length(object$smooth)) {
-        if (name == object$smooth[[j]]$term)
-          repnum <- df.vec[[j]]
+      # untested
+      if (name %in% pterms) {
+        temp <- as.data.frame(data[[k]])
+        names(temp) <- name
+        newx <- cbind(newx, temp)
       }
 
-      # create temporary data.frame with only 1 column
-      temp <- as.data.frame(t(rep(data[[k]], repnum)))
-      names(temp) <- rep(name, repnum)
+      # repeat entries in s-term at least as many times as there are degrees of 
+      # freedom for that term
+      if (name %in% sterms) {
+        for (j in 1:length(object$smooth)) {
+          if (name == object$smooth[[j]]$term)
+            repnum <- df.vec[[j]]
+        }
 
-      # bind it
-      newx <- cbind(newx, temp)
+        # create temporary data.frame with only 1 column
+        temp <- as.data.frame(t(rep(data[[k]], repnum)))
+        names(temp) <- rep(name, repnum)
+
+        # bind it
+        newx <- cbind(newx, temp)
+      }
     }
   }
 
