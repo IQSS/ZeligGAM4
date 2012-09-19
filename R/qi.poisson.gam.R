@@ -1,4 +1,6 @@
 #' Compute Quantities of Interest for the Zelig Model poisson.gam
+#' @usage \method{qi}{poisson.gam}(obj, x=NULL, x1=NULL, y=NULL, num=1000, param=NULL)
+#' @S3method qi poisson.gam
 #' @param obj a zelig object
 #' @param x a setx object
 #' @param x1 an optional setx object

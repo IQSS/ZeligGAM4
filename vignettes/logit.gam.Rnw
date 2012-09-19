@@ -1,5 +1,5 @@
 \documentclass{article}
-\SweaveOpts{results=hide, prefix.string=vigpics/gam}
+\SweaveOpts{results=hide, prefix.string=logit-gam}
 \usepackage{bibentry}
 \usepackage{graphicx}
 \usepackage{natbib}

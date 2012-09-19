@@ -1,4 +1,6 @@
-#' Compute Quantities of Interest for the Zelig Model logit.gam
+#' Compute Quantities of Interest for the Zelig Model ``logit.gam''
+#' @usage \method{qi}{logit.gam}(obj, x=NULL, x1=NULL, y=NULL, num=1000, param=NULL)
+#' @S3method qi logit.gam
 #' @param obj a zelig object
 #' @param x a setx object
 #' @param x1 an optional setx object
