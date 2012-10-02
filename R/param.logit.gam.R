@@ -10,7 +10,7 @@
 #' @return a list specifying link, link-inverse, random samples, and ancillary
 #' parameters
 param.logit.gam <- function(obj, num=1000, ...) {
-  coef <- mvrnorm(num, mu=coef(obj), Sigma=vcov(obj))
+  coef <- mvrnorm(num, mu=coef(.fitted), Sigma=vcov(.fitted))
   list(
        simulations = coef,
        family = binomial()

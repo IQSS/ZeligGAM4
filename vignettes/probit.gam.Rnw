@@ -77,14 +77,14 @@ Estimate the model, summarize the results, and plot nonlinearities:
 <<echo=TRUE, results=hide, fig=FALSE>>=
 z.out <- zelig(y~s(x0)+s(x1)+s(x2)+s(x3), model="probit.gam", data=my.data)
 summary(z.out)
-plot(z.out,pages=1,residuals=TRUE)
+plot(z.out$result,pages=1,residuals=TRUE)
 @
 Note that the {\tt plot()} function can be used after model estimation and before simulation to view the nonlinear relationships in the independent variables: 
 \SweaveOpts{echo=false}
 \begin{figure}[here]
 \centering
 <<fig=TRUE, width=6, height=6>>=
-plot(z.out,pages=1,residuals=TRUE)
+plot(z.out$result,pages=1,residuals=TRUE)
 @
 \label{fig:plotgam}
 \end{figure}
@@ -135,7 +135,7 @@ An extra ridge penalty (useful with convergence problems):
 z.out <- zelig(y~s(x0)+s(x1)+s(x2)+s(x3), H=diag(0.5,37), 
    model="probit.gam", data=my.data) 
 summary(z.out)
-plot(z.out,pages=1,residuals=TRUE)
+plot(z.out$result,pages=1,residuals=TRUE)
 
 @
 Set the smoothing parameter for the first term, estimate the rest:
@@ -143,7 +143,7 @@ Set the smoothing parameter for the first term, estimate the rest:
 z.out <- zelig(y~s(x0)+s(x1)+s(x2)+s(x3),sp=c(0.01,-1,-1,-1), 
    model="probit.gam", data=my.data)
 summary(z.out)
-plot(z.out,pages=1)
+plot(z.out$result,pages=1)
 
 @
 Set lower bounds on smoothing parameters:
@@ -151,7 +151,7 @@ Set lower bounds on smoothing parameters:
 z.out <- zelig(y~s(x0)+s(x1)+s(x2)+s(x3),min.sp=c(0.001,0.01,0,10),  
     model="probit.gam", data=my.data) 
 summary(z.out)
-plot(z.out, pages=1)
+plot(z.out$result, pages=1)
 
 @
 A GAM with 3df regression spline term \& 2 penalized terms:
@@ -159,7 +159,7 @@ A GAM with 3df regression spline term \& 2 penalized terms:
 z.out <-zelig(y~s(x0,k=4,fx=TRUE,bs="tp")+s(x1,k=12)+s(x2,k=15), 
     model="probit.gam", data=my.data)
 summary(z.out)
-plot(z.out,pages=1)
+plot(z.out$result,pages=1)
 
 @
 \end{enumerate}

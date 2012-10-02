@@ -9,6 +9,7 @@
 #' @param num an integer specifying the number of simulations to produce
 #' @return the predicted values for the given data and regression
 #' @author Matt Owen \email{mowen@@iq.harvard.edu}
+#' @export
 compute.ev <- function (obj, x, inv, num) {
   # return NA for bad setx objects
   if (is.null(x))

@@ -10,6 +10,7 @@
 #' @param num an integer specifying the number of simulations to produce
 #' @return the predicted values for the given data and regression
 #' @author Matt Owen \email{mowen@@iq.harvard.edu}
+#' @export
 logit.pv <- function (obj, x, inv, num) {
   # return NA for bad setx objects
   if (is.null(x))
@@ -38,6 +39,7 @@ logit.pv <- function (obj, x, inv, num) {
 #' @param num an integer specifying the number of simulations to produce
 #' @return the predicted values for the given data and regression
 #' @author Matt Owen \email{mowen@@iq.harvard.edu}
+#' @export
 normal.pv <- function (obj, x, inv, num) {
   # return NA for bad setx objects
   if (is.null(x))
@@ -70,6 +72,7 @@ normal.pv <- function (obj, x, inv, num) {
 #' @param num an integer specifying the number of simulations to produce
 #' @return the predicted values for the given data and regression
 #' @author Matt Owen \email{mowen@@iq.harvard.edu}
+#' @export
 poisson.pv <- function (obj, x, inv, num) {
   # return NA for bad setx objects
   if (is.null(x))
@@ -100,4 +103,5 @@ poisson.pv <- function (obj, x, inv, num) {
 #' @param num an integer specifying the number of simulations to produce
 #' @return the predicted values for the given data and regression
 #' @author Matt Owen \email{mowen@@iq.harvard.edu}
+#' @export
 probit.pv <- logit.pv
