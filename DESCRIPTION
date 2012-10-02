@@ -34,3 +34,4 @@ Collate:
     'zelig2poisson.gam.R'
     'zelig2probit.gam.R'
     'ZeligGAM-package.R'
+    'common-methods.R'

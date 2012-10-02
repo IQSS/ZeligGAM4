@@ -10,5 +10,5 @@ vcov.zelig <- function (obj, ...)
   vcov(obj, ...)
 
 #' @S3method plot zelig
-plot.zelig <- functino (obj, ...)
+plot.zelig <- function (obj, ...)
   plot(obj, ...)
