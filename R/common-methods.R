@@ -2,13 +2,13 @@
 # The issue in Zelig should be fixed by November `12. :(
 
 #' @S3method coef zelig
-coef.zelig <- function (obj, ...)
-  coef(obj, ...)
+coef.zelig <- function (object, ...)
+  coef(object$result, ...)
 
 #' @S3method vcov zelig
-vcov.zelig <- function (obj, ...)
-  vcov(obj, ...)
+vcov.zelig <- function (object, ...)
+  vcov(object$result, ...)
 
 #' @S3method plot zelig
-plot.zelig <- function (obj, ...)
-  plot(obj, ...)
+plot.zelig <- function (x, ...)
+  plot(x$result, ...)

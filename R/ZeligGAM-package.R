@@ -18,3 +18,5 @@
 #' @author Skyler Cranmer
 #' @keywords package, GAM, Generalized Additive Models, Zelig
 NULL
+
+.fitted <- NULL
