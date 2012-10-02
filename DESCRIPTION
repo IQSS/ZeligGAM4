@@ -1,15 +1,15 @@
 Package: ZeligGAM
 License: GPL (>=2)
 Maintainer: Matt Owen <mowen@iq.harvard.edu>
-Title: A Zelig Model
+Title: Genereal Additive Models for Zelig
 Author: Skyler Cranmer
-Description: A Zelig Model
-Version: 0.2
-Packaged: Wed Jul 27 09:11:16 2011
-URL: http://gking.harvard.edu/zelig
-Date: 2011-07-27
+Description: General Additive Models extend GLM's to support the application of
+    smoothing functions to the predictor terms.
+Version: 0.7
+URL: http://projects.iq.harvard.edu/zelig
+Date: 2012-10-02
 Depends:
-    Zelig (>= 4.0-6),
+    Zelig (>= 4.0-11),
     gam,
     mgcv
 Collate:
