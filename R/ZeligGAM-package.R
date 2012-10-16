@@ -4,7 +4,7 @@
 #'   Package: \tab ZeligGAM\cr
 #'   Version: \tab 0.7-0\cr
 #'   Date: \tab 2012-10-16\cr
-#'   Depends: Zelig (>= 4.0-11), gam, mgcv\cr
+#'   Depends: Zelig (>= 4.0-11), mgcv\cr
 #'   License: \tab GPL version 2 or newer\cr
 #' }
 #'
