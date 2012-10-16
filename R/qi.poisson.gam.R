@@ -9,7 +9,6 @@
 #' @param param a parameters object
 #' @return a list of key-value pairs specifying pairing titles of quantities of interest
 #'         with their simulations
-#' @export
 qi.poisson.gam <- function(obj, x=NULL, x1=NULL, y=NULL, num=1000, param=NULL) {
   inv <- linkinv(param)
 

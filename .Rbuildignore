@@ -1,5 +1,6 @@
 ^\..*
 ^.git.*$
+^man/\..*
 ^man/describe\..*
 ^man/param\..*
 ^man/qi\..*
