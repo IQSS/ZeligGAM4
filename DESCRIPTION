@@ -5,7 +5,7 @@ Title: Genereal Additive Models for Zelig
 Author: Matthew Owen, Skyler Cranmer, Olivia Lau, Kosuke Imai and Gary King
 Description: General Additive Models extend GLM's to support the application of
     smoothing functions to the predictor terms.
-Version: 0.7
+Version: 0.7-0
 URL: http://projects.iq.harvard.edu/zelig
 Date: 2012-10-16
 Depends:
