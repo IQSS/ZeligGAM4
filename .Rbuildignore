@@ -3,3 +3,4 @@
 ^man/describe\..*
 ^man/param\..*
 ^man/qi\..*
+^man/plot\..*

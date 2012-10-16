@@ -1,0 +1,4 @@
+logit.gam     General Additive for Model for Logist Regression
+normal.gam    General Additive for Normal Regression
+poisson.gam   General Additive for Poisson Regression
+probit.gam    General Additive for Probit Regression
