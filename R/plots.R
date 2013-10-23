@@ -68,6 +68,19 @@ plot.sim.logit.gam <- normal.plot <- function (x, ...) {
 #' @S3method plot sim.normal.gam
 plot.sim.normal.gam <- normal.plot
 
+
+
+#' Plot Simualted Quantities of Interest for GAM Zelig Models
+#' @usage \method{plot}{sim.normal.gam}(x, ...)
+#' @param x a simulated GEE object containing simulations of quantities of
+#'   interest
+#' @param ... ignored parameters
+#' @author Matt Owen \email{mowen@@iq.harvard.edu}
+#' @S3method plot sim.normal.gam
+plot.sim.hetnormal.gam <- normal.plot
+
+
+
 #' Plot Simualted Quantities of Interest for GAM Zelig Models
 #' @usage \method{plot}{sim.poisson.gam}(x, ...)
 #' @param x a simulated GEE object containing simulations of quantities of

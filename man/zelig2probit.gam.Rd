@@ -8,7 +8,7 @@ the Pre-existing Model-fitting Method}
 \arguments{
   \item{formula}{a formula}
 
-  \item{...}{additonal parameters}
+  \item{...}{additional parameters}
 
   \item{data}{a data.frame}
 }
